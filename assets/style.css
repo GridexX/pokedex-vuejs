@@ -1,0 +1,246 @@
+.type-normal {
+    --color: #C2C2A1;
+  }
+  
+  .type-flying {
+    --color: #BAB0D5;
+  }
+  
+  .type-ghost {
+    --color: #735797;
+  }
+  
+  .type-dark {
+    --color: #333;
+  }
+  
+  .type-steel {
+    --color: #CCCCDE;
+  }
+  
+  .type-ground {
+    --color: #B1736C;
+  }
+  
+  .type-poison {
+    --color: #7C538C;
+  }
+  
+  .type-grass {
+    --color: #48D0B0;
+  }
+  
+  .type-fire {
+    --color: #FB6C6C;
+  }
+  
+  .type-electric {
+    --color: #FFD86F;
+  }
+  
+  .type-fairy {
+    --color: #f469a9;
+  }
+  
+  .type-bug {
+    --color: #C3CE75;
+  }
+  
+  .type-fighting {
+    --color: #d6b591;
+  }
+  
+  .type-water {
+    --color: #609FB5;
+  }
+  
+  .type-psychic {
+    --color: #9B7FA6;
+  }
+  
+  .type-ice {
+    --color: #7FCCEC;
+  }
+  
+  .type-rock {
+    --color: #A6AAB6;
+  }
+  
+  .type-dragon {
+    --color: #F9BE00;
+  }
+
+h1 {
+    color: yellow;
+    font-family: 'Revalia', cursive;
+    font-size: 3rem;
+}
+
+
+html{
+    /* background-image: url('https://alexismoren.fr/uploads/e56e1c94b8137ec614cac8b0628f8ed1033393c3.jpg') no-repeat ; */
+    background: linear-gradient(111deg, rgba(2,0,36,1) 0%, rgba(115,115,115,1) 50%, rgba(0,119,143,1) 100%) no-repeat center center fixed ; 
+}
+
+body, html {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.pokemons_container {
+    display: flex;
+    direction: row;
+    flex-flow: wrap ;
+
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pokemon_card {
+
+    background-color: var(--color);
+    transition: ease-out 200ms;
+}
+
+.first_infos {
+    margin: 1rem 1rem;
+    display: flex;
+    direction: row;
+    flex-shrink: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20rem;
+}
+
+.pokemon_card:hover {
+    scale: 1.05;
+    box-shadow: 0 0 1rem var(--color);
+}
+
+.poke_name {
+    background-color: white;
+    border-radius: 1rem;
+    padding: .3rem;
+    font-size: 1.25rem;
+    opacity: 90%;
+    box-shadow: 0 0 5px var(--color);
+    
+}
+
+.more_infos {
+    margin-bottom: 2rem;
+}
+
+#modal{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: 30;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+#pokedex{
+    margin-top: 10rem;
+    width: 40rem;
+    height: 30rem;
+    background-color: #E84848;
+    opacity: 90%;
+
+}
+
+.input_comp {
+    color: white;
+    background-color: gray;
+    font-size: 2rem;
+    padding: 2rem;
+    outline: 5px solid rgb(73, 73, 73);
+
+}
+
+.card_img {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 2rem;
+    background: white;
+    border-radius: 5rem;
+    outline: .5rem solid;
+}
+
+.pokemon_card {
+    border-radius: 2rem;
+    margin : 1rem 1rem;
+    cursor: pointer;
+    padding: 0 2rem;
+    height: auto;
+}
+
+.info_div {
+    align-self: baseline;
+    width: 10rem;
+    flex-grow: none;
+    width: auto;
+}
+
+.inputDiv {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.label_div {
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    padding: 4px .2rem;
+
+    color: gray;
+    margin-top: 4px;
+}
+
+.white_p {
+    margin: 0 auto;
+    width: 100%
+}
+
+
+#img_menu {
+    width: auto;
+    max-height: 15rem;
+}
+
+header {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#input_search {
+    color: white;
+    width: 10rem;
+    font-family: 'Revalia', cursive;
+    font-size: 2.5rem;
+}
+
+.header {
+    min-width: 20rem;
+    width: 100%;
+    max-width: 50rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    background-color: #E84848;
+    border-radius: 2rem;
+}

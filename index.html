@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pokedex with VueJS</title>
+    <link rel="icon" href="assets/images/pokeball.jpg" />
+    <meta name="author" content="Arsène <arsene@go2scale.com>" />
+    <meta name="description" content="Explore the vast universe of pokemon with this simple VueJS PokeDex website" />
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+
+    <!-- Import css -->
+    <link href="./assets/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Import App -->
+        <script src="./main.js"></script>
+        <script src="./components/PokemonCard.js"></script>
+
+        <header>
+            <div class="header">
+                <img id="img_menu" alt="pokedex image"
+                    src="https://s1.qwant.com/thumbr/0x380/3/c/7c3e9f11a73056a6dfb3c5be667667923385920019d1757b994a811ae5a6b2/pokedex_dribbble-01_4x.jpg?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F1363206%2Fscreenshots%2F5497614%2Fpokedex_dribbble-01_4x.jpg&q=0&b=1&p=0&a=0" />
+                <h1>PokeFlix</h1>
+            </div>
+
+        </header>
+
+        <div class="inputDiv">
+            <input class="input_comp" type="text" placeholder="Search Pokemon" v-model="inputValue" @keyup.enter.native="search" @keyup.escape.native="refreshList"/>
+        </div>
+
+        <div class="pokemons_container">
+            <pokemon-card v-for="pokemon in pokemons" :id="pokemon.id" :name="pokemon.name" :weight="pokemon.weight"
+                :height="pokemon.height" :color="pokemon.pokemon_v2_pokemonspecy.pokemon_v2_pokemoncolor.name"
+                :types="pokemon.pokemon_v2_pokemontypes"
+                :locations="pokemon.pokemon_v2_encounters">
+            </pokemon-card>
+        </div>
+    </div>
+
+    <!-- Mount App -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+
+</html>
